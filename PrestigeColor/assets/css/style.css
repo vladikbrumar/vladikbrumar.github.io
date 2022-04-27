@@ -795,3 +795,64 @@ with spacing between */
     font-size: 14px;
     text-transform: uppercase;
 }
+
+
+
+
+
+
+/*     PORTFOLIO PAGE     */
+
+.intro {
+    background: url("../images/portfolio-intro.jpg") center no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.intro__title,
+.intro__subtitle {
+    color: #fff;
+}
+
+.section .btn-gallery {
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+.modal__gallery {
+/*    visibility: hidden;*/
+
+}
+
+/* Slider */
+.splide {
+    margin: 0 auto;
+}
+
+.thumbnails {
+    display: flex;
+    margin: 1rem auto 0;
+    padding: 0;
+    justify-content: center;
+}
+
+.thumbnail {
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    list-style: none;
+    margin: 0 0.2rem;
+    cursor: pointer;
+    opacity: 0.3;
+}
+
+.thumbnail.is-active {
+    opacity: 1;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: auto;
+}
+
