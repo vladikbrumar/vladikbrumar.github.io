@@ -14,11 +14,11 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/css/themes/splide-skyblue.min.css" />
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/js/splide.min.js"></script>
-
+    <script type="text/javascript" src="assets/js/main.js"></script>
 
 </head>
 
-<body>
+<body onload="serviceTypeSwitch()">
 
     <header class="header">
         <div class="continer">
@@ -51,13 +51,63 @@
         <div class="container">
             <div class="section__header">Projects Gallery</div>
 
+            <ul class="gallery__header" id="serviceList">
+                <li class="service__type">Interior</li>
+                <li class="service__type">Exterior</li>
+
+            </ul>
+
             <div class="gallery">
+                <div class="gallery__interior active" id="interior">
 
-                <div class="projects__interior">Interior</div>
-                <div class="projects__interior">Exterior</div>
+                    <div class="gallery__item">
+                        <img src="assets/images/gallery-interior/service1.png" alt="" class="gallery__img">
+                        <div class="item__text">Interior 1</div>
+                    </div>
 
 
+                    <div class="gallery__item">
+                        <img src="assets/images/gallery-interior/service2.png" alt="" class="gallery__img">
+                        <div class="item__text">Interior 2</div>
+                    </div>
 
+                    <div class="gallery__item">
+                        <img src="assets/images/gallery-interior/service3.jpg" alt="" class="gallery__img">
+                        <div class="item__text">Interior 3</div>
+                    </div>
+
+                    <div class="gallery__item">
+                        <img src="assets/images/gallery-interior/service4.jpg" alt="" class="gallery__img">
+                        <div class="item__text">Interior 4</div>
+                    </div>
+
+                </div>
+
+
+                <div class="gallery__exterior" id="exterior">
+
+                    <div class="gallery__item">
+                        <img src="assets/images/gallery-exterior/service1-1.jpg" alt="" class="gallery__img">
+                        <div class="item__text">Exterior 1</div>
+                    </div>
+
+
+                    <div class="gallery__item">
+                        <img src="assets/images/gallery-exterior/service1-2.jpg" alt="" class="gallery__img">
+                        <div class="item__text">Exterior 2</div>
+                    </div>
+
+                    <div class="gallery__item">
+                        <img src="assets/images/gallery-exterior/service1-3.jpg" alt="" class="gallery__img">
+                        <div class="item__text">Exterior 3</div>
+                    </div>
+
+                    <div class="gallery__item">
+                        <img src="assets/images/gallery-exterior/service1-4.jpg" alt="" class="gallery__img">
+                        <div class="item__text">Exterior 4</div>
+                    </div>
+
+                </div>
             </div>
 
 
@@ -176,6 +226,9 @@
         });
 
         splide.mount();
+
     </script>
 
-</body></html>
+</body>
+
+</html>
