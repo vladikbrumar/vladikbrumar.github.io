@@ -523,7 +523,7 @@ with spacing between */
 .footer__inner {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 100px;
+    padding-bottom: 20px;
     position: relative;
 }
 

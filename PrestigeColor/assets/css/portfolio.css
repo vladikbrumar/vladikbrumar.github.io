@@ -1,20 +1,52 @@
-.video__bg {
-    position: fixed;
-    right: 0;
-    bottom: 0;
+.intro {
+    background: url("../images/portfolio-intro.jpg") center no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
 }
 
-.intro:after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    background: black;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: .5;
-}
-
-.white__text {
+.intro__title,
+.intro__subtitle {
     color: #fff;
+}
+
+.section .btn-gallery {
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+.modal__gallery {
+/*    visibility: hidden;*/
+
+}
+
+/* Slider */
+.splide {
+    margin: 0 auto;
+}
+
+.thumbnails {
+    display: flex;
+    margin: 1rem auto 0;
+    padding: 0;
+    justify-content: center;
+}
+
+.thumbnail {
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    list-style: none;
+    margin: 0 0.2rem;
+    cursor: pointer;
+    opacity: 0.3;
+}
+
+.thumbnail.is-active {
+    opacity: 1;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: auto;
 }

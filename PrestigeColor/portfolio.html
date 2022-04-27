@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Portfolio</title>
@@ -9,7 +10,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:ital,wght@0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/f4237ef674.js" crossorigin="anonymous"></script>
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/css/themes/splide-skyblue.min.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/js/splide.min.js"></script>
+
+
 </head>
 
 <body>
@@ -29,24 +36,36 @@
         </div>
     </header>
 
-
-    <div class="intro parralax__wrap">
+    <div class="intro parallax__wrap">
         <div class="container">
-            <video autoplay muted loop class="video__bg">
-                <source src="assets/images/bg-vid.mp4" type="video/mp4">
-            </video>
             <div class="intro__inner parallax__inner">
-                <div class="intro__title white__text">Our Projects</div>
-                <div class="intro__subtitle white__text">Our mission to provide the best service!</div>
+                <div class="intro__title">Our projects</div>
+                <div class="intro__subtitle">Acredited painting company</div>
 
                 <a href="#" class="btn">Contact Us</a>
             </div>
         </div>
     </div>
 
+
     <section class="section">
-        <h2 class="section__header">Hello World</h2>
+        <div class="container">
+            <div class="section__header">Projects Gallery</div>
+
+            <div class="gallery">
+
+                <div class="projects__interior">Interior</div>
+                <div class="projects__interior">Exterior</div>
+
+
+
+            </div>
+
+
+            <div class="btn btn-gallery">open gallery</div>
+        </div>
     </section>
+
 
     <footer class="footer">
         <div class="container">
@@ -85,5 +104,79 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal__gallery">
+        <div class="container">
+            <div id="main-slider" class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <img src="https://source.unsplash.com/random/1000x1000?sig=1" alt="" />
+                        </li>
+                        <li class="splide__slide">
+                            <img src="https://source.unsplash.com/random/1000x1000?sig=2" alt="" />
+                        </li>
+                        <li class="splide__slide">
+                            <img src="https://source.unsplash.com/random/1000x1000?sig=3" alt="" />
+                        </li>
+                        <li class="splide__slide">
+                            <img src="https://source.unsplash.com/random/1000x1000?sig=4" alt="" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <ul id="thumbnails" class="thumbnails">
+                <li class="thumbnail">
+                    <img src="https://source.unsplash.com/random/1000x1000?sig=1" alt="" />
+                </li>
+                <li class="thumbnail">
+                    <img src="https://source.unsplash.com/random/1000x1000?sig=2" alt="" />
+                </li>
+                <li class="thumbnail">
+                    <img src="https://source.unsplash.com/random/1000x1000?sig=3" alt="" />
+                </li>
+                <li class="thumbnail">
+                    <img src="https://source.unsplash.com/random/1000x1000?sig=4" alt="" />
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        var splide = new Splide("#main-slider", {
+            width: 600,
+            height: 300,
+            pagination: false,
+            cover: true
+        });
+
+        var thumbnails = document.getElementsByClassName("thumbnail");
+        var current;
+
+        for (var i = 0; i < thumbnails.length; i++) {
+            initThumbnail(thumbnails[i], i);
+        }
+
+        function initThumbnail(thumbnail, index) {
+            thumbnail.addEventListener("click", function() {
+                splide.go(index);
+            });
+        }
+
+        splide.on("mounted move", function() {
+            var thumbnail = thumbnails[splide.index];
+
+            if (thumbnail) {
+                if (current) {
+                    current.classList.remove("is-active");
+                }
+
+                thumbnail.classList.add("is-active");
+                current = thumbnail;
+            }
+        });
+
+        splide.mount();
+    </script>
 
 </body></html>
