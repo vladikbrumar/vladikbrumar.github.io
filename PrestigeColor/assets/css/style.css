@@ -25,12 +25,18 @@ h6 {
 
 ul,
 li {
-    display: block;
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
+ul {
+    display: block;
+}
+
+li {
+    display: inline;
+}
 
 /* Container */
 .container {
@@ -190,6 +196,8 @@ with spacing between */
         color .1s linear;
 
     transition: box-shadow 0.2s linear;
+
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -821,6 +829,10 @@ with spacing between */
     margin-bottom: 50px;
 }
 
+.gallery {
+    position: relative;
+}
+
 .service__type {
     display: inline;
 
@@ -834,91 +846,173 @@ with spacing between */
     cursor: pointer;
 }
 
-.gallery {
-    position: relative;
-}
-
-.gallery__interior,
-.gallery__exterior {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+.interior__categories,
+.exterior__categories {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, 0);
     visibility: hidden;
+    width: 800px;
+
 }
 
 .active {
     visibility: visible;
+}
+
+.category__item {
+    margin: 0 20px;
+    color: #000;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 1.3em;
+}
+
+.gallery__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-top: 70px;
+}
+
+.gallery__content-item {
+    width: 380px;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+
+.gallery__content-item img {
+    width: 100%;
+    max-height: 500px;
+}
+/*    MODAL WINDOWS    */
+
+
+.gallery__modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal__content {
+    background-color: #fefefe;
+    margin: auto;
+    /*    padding: 23px;*/
+    border: 1px solid #888;
+    width: 40%;
+    height: 80%;
+    position: relative;
+}
+
+.close {
+    color: #fff;
+    float: right;
+    font-size: 40px;
+    font-weight: bold;
     position: absolute;
     top: 0;
+    right: 30px;
+    z-index: 1;
 }
 
-.gallery__item {
-    position: relative;
-
-    width: 300px;
-
-}
-
-.gallery__img {
-    width: 260px;
-    height: 340px;
-
-    cursor: pointer;
-}
-
-.item__text {
-    position: absolute;
-    bottom: 0;
-    /*
-    left: 50%;
-    transform: translateX(-50%);
-*/
-
+.close:hover,
+.close:focus {
     color: #fff;
-    font-weight: 500;
-    text-transform: uppercase;
-    font-size: 16px;
-    letter-spacing: 2px;
-
-    white-space: nowrap;
-
-    text-align: center;
-    width: 260px;
-    margin-left: 20px;
-
-    background: #349aca;
-
-    padding: 0 79px;
-
-}
-
-/* Slider */
-.splide {
-    margin: 0 auto;
-}
-
-.thumbnails {
-    display: flex;
-    margin: 1rem auto 0;
-    padding: 0;
-    justify-content: center;
-}
-
-.thumbnail {
-    width: 70px;
-    height: 70px;
-    overflow: hidden;
-    list-style: none;
-    margin: 0 0.2rem;
+    text-decoration: none;
     cursor: pointer;
-    opacity: 0.3;
 }
 
-.thumbnail.is-active {
+/*    SLIDER     */
+
+.slider {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider .slider-item {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: absolute;
+    transition: transform 400ms;
+}
+
+.slider-item img {
+    width: 100%;
+    height: 100%;
+}
+
+.slider .slider-item.active,
+.slider .slider-item.prev-item,
+.slider .slider-item.next-item {
+    display: block;
+}
+
+.slider-item.prev-item,
+.slider-item.active.slide-next {
+    transform: translateX(-100%);
+}
+
+.slider-item.active.slide-prev,
+.slider-item.next-item {
+    transform: translateX(100%);
+}
+
+.slider-item.prev-item.slide-end,
+.slider-item.next-item.slide-end {
+    transform: translateX(0);
+}
+
+.slider-control-prev,
+.slider-control-next {
+    position: absolute;
+    z-index: 1000;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+    /*    opacity: 0.3;*/
+    transition: opacity 300ms;
+    color: #fff;
+}
+
+.slider-control-prev {
+    left: 20px;
+}
+
+.slider-control-prev:hover {}
+
+.slider-control-next {
+    right: 20px;
+}
+
+.slider-control-next:hover {}
+
+.slide-indicator {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background: #ffffff;
+    opacity: 0.5;
+    margin: 0 8px;
+}
+
+.slide-indicator.active {
     opacity: 1;
 }
 
-.thumbnail img {
-    width: 100%;
-    height: auto;
+svg {
+    width: 50px;
+    height: 50px;
 }

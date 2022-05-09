@@ -10,15 +10,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:ital,wght@0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
 
-
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/css/themes/splide-skyblue.min.css" />
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/js/splide.min.js"></script>
-    <script type="text/javascript" src="assets/js/main.js"></script>
-
+    <script type="module" src="assets/js/main.js"></script>
 </head>
 
-<body onload="serviceTypeSwitch()">
+<body>
 
     <header class="header">
         <div class="continer">
@@ -51,67 +46,48 @@
         <div class="container">
             <div class="section__header">Projects Gallery</div>
 
-            <ul class="gallery__header" id="serviceList">
-                <li class="service__type">Interior</li>
-                <li class="service__type">Exterior</li>
-
-            </ul>
-
             <div class="gallery">
-                <div class="gallery__interior active" id="interior">
+                <ul class="gallery__header" id="serviceList">
+                    <li class="service__type" id="interiorType">Interior</li>
+                    <li class="service__type" id="exteriorType">Exterior</li>
+                </ul>
 
-                    <div class="gallery__item">
-                        <img src="assets/images/gallery-interior/service1.png" alt="" class="gallery__img">
-                        <div class="item__text">Interior 1</div>
+                <ul class="interior__categories active" id="interior__categories">
+                    <li class="category__item">Floor</li>
+                    <li class="category__item">Interior 2</li>
+                    <li class="category__item">Interior 3</li>
+                </ul>
+
+                <ul class="exterior__categories" id="exterior__categories">
+                    <li class="category__item" data-index="0">Floor</li>
+                    <li class="category__item" data-index="1">Door</li>
+                    <li class="category__item"  data-index="2">Drywall</li>
+                </ul>
+
+                <div class="gallery__content" id="gallery__content">
+                    <div class="gallery__content-item" data-index="0">
+                        <img src="assets/images/exterior/floor/adress1/after/0.jpg" alt="">
                     </div>
-
-
-                    <div class="gallery__item">
-                        <img src="assets/images/gallery-interior/service2.png" alt="" class="gallery__img">
-                        <div class="item__text">Interior 2</div>
+                    <div class="gallery__content-item" data-index="1">
+                        <img src="assets/images/exterior/floor/adress1/after/1.jpg" alt="">
                     </div>
-
-                    <div class="gallery__item">
-                        <img src="assets/images/gallery-interior/service3.jpg" alt="" class="gallery__img">
-                        <div class="item__text">Interior 3</div>
+                    <div class="gallery__content-item" data-index="2">
+                        <img src="assets/images/exterior/floor/adress1/after/0.jpg" alt="">
                     </div>
-
-                    <div class="gallery__item">
-                        <img src="assets/images/gallery-interior/service4.jpg" alt="" class="gallery__img">
-                        <div class="item__text">Interior 4</div>
+                    <div class="gallery__content-item" data-index="3">
+                        <img src="assets/images/exterior/floor/adress1/after/1.jpg" alt="">
                     </div>
-
+                    <div class="gallery__content-item" data-index="4">
+                        <img src="assets/images/exterior/floor/adress1/after/0.jpg" alt="">
+                    </div>
+                    <div class="gallery__content-item" data-index="5">
+                        <img src="assets/images/exterior/floor/adress1/after/1.jpg" alt="">
+                    </div>
                 </div>
 
-
-                <div class="gallery__exterior" id="exterior">
-
-                    <div class="gallery__item">
-                        <img src="assets/images/gallery-exterior/service1-1.jpg" alt="" class="gallery__img">
-                        <div class="item__text">Exterior 1</div>
-                    </div>
-
-
-                    <div class="gallery__item">
-                        <img src="assets/images/gallery-exterior/service1-2.jpg" alt="" class="gallery__img">
-                        <div class="item__text">Exterior 2</div>
-                    </div>
-
-                    <div class="gallery__item">
-                        <img src="assets/images/gallery-exterior/service1-3.jpg" alt="" class="gallery__img">
-                        <div class="item__text">Exterior 3</div>
-                    </div>
-
-                    <div class="gallery__item">
-                        <img src="assets/images/gallery-exterior/service1-4.jpg" alt="" class="gallery__img">
-                        <div class="item__text">Exterior 4</div>
-                    </div>
-
-                </div>
             </div>
 
-
-            <div class="btn btn-gallery">open gallery</div>
+            <div class="btn btn-gallery" id="modalBtn">open gallery</div>
         </div>
     </section>
 
@@ -154,81 +130,29 @@
         </div>
     </footer>
 
-    <div class="modal__gallery">
-        <div class="container">
-            <div id="main-slider" class="splide">
-                <div class="splide__track">
-                    <ul class="splide__list">
-                        <li class="splide__slide">
-                            <img src="https://source.unsplash.com/random/1000x1000?sig=1" alt="" />
-                        </li>
-                        <li class="splide__slide">
-                            <img src="https://source.unsplash.com/random/1000x1000?sig=2" alt="" />
-                        </li>
-                        <li class="splide__slide">
-                            <img src="https://source.unsplash.com/random/1000x1000?sig=3" alt="" />
-                        </li>
-                        <li class="splide__slide">
-                            <img src="https://source.unsplash.com/random/1000x1000?sig=4" alt="" />
-                        </li>
-                    </ul>
+    <div id="galleryModal" class="gallery__modal">
+        <div class="modal__content">
+            <span class="close">&times;</span>
+            <div class="slider" id="slider">
+                <div class="slider-item active">
+                    <img src="assets/images/exterior/floor/adress1/after/0.jpg" alt="">
                 </div>
+                <div class="slider-item">
+                    <img src="assets/images/exterior/floor/adress1/after/1.jpg" alt="">
+                </div>
+                <span class="slider-control-prev" role="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
+                    </svg>
+                </span>
+                <span class="slider-control-next" role="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+                    </svg>
+                </span>
             </div>
-            <ul id="thumbnails" class="thumbnails">
-                <li class="thumbnail">
-                    <img src="https://source.unsplash.com/random/1000x1000?sig=1" alt="" />
-                </li>
-                <li class="thumbnail">
-                    <img src="https://source.unsplash.com/random/1000x1000?sig=2" alt="" />
-                </li>
-                <li class="thumbnail">
-                    <img src="https://source.unsplash.com/random/1000x1000?sig=3" alt="" />
-                </li>
-                <li class="thumbnail">
-                    <img src="https://source.unsplash.com/random/1000x1000?sig=4" alt="" />
-                </li>
-            </ul>
         </div>
     </div>
-
-    <script>
-        var splide = new Splide("#main-slider", {
-            width: 600,
-            height: 300,
-            pagination: false,
-            cover: true
-        });
-
-        var thumbnails = document.getElementsByClassName("thumbnail");
-        var current;
-
-        for (var i = 0; i < thumbnails.length; i++) {
-            initThumbnail(thumbnails[i], i);
-        }
-
-        function initThumbnail(thumbnail, index) {
-            thumbnail.addEventListener("click", function() {
-                splide.go(index);
-            });
-        }
-
-        splide.on("mounted move", function() {
-            var thumbnail = thumbnails[splide.index];
-
-            if (thumbnail) {
-                if (current) {
-                    current.classList.remove("is-active");
-                }
-
-                thumbnail.classList.add("is-active");
-                current = thumbnail;
-            }
-        });
-
-        splide.mount();
-
-    </script>
-
 </body>
 
 </html>
