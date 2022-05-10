@@ -65,10 +65,7 @@ function loadGalleryContent() {
     insertGalleryItems();
 }
 
-function insertGalleryItems()
-    console.log(typeSet)
-    console.log(serviceSet)
-    console.log(typeSet)
+function insertGalleryItems(){
 
     document.getElementById("gallery__content").innerHTML = ''
     document.getElementById("gallery__content").innerHTML += `${Array(projects.length).join(0).split(0).map((item, i) => `<div class="gallery__content-item"><img src="assets/images/${typeSet}/${serviceSet}/${projects[i].name}/${projects[i].mainIMG}" alt=""></div>`).join('')}`;
