@@ -36,10 +36,10 @@ async function typeSentence(sentence, eleRef, delay = 0) {
     if(count===4)
       className = 'congrats';
 
-    if(count>=5)
+    if(count>=6)
       className = 'love';
 
-    if(count===13)
+    if(count===5)
       className = 'joke';
 
     introClasses.add(className)
@@ -84,13 +84,13 @@ async function typeSentence(sentence, eleRef, delay = 0) {
             if(loveCount === 4)
               typeSentence(textData.congrats, typeInId);
 
-            if(loveCount >= 5)
+            if(loveCount > 5)
               typeSentence(textData.love, typeInId);
 
             if(loveCount === 0)
               typeSentence(textData.end, typeInId)
             
-            if(loveCount === 6)
+            if(loveCount === 5)
               typeSentence(textData.joke, typeInId)
 
               changeBackground(loveCount)
