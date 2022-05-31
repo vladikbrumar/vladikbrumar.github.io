@@ -12,7 +12,6 @@
 
     <script type="module" src="assets/js/main.js"></script>
 </head>
-
 <body>
 
     <header class="header">
@@ -35,124 +34,57 @@
             <div class="intro__inner parallax__inner">
                 <div class="intro__title">Our projects</div>
                 <div class="intro__subtitle">Acredited painting company</div>
-
-                <a href="#" class="btn">Contact Us</a>
             </div>
         </div>
     </div>
-
 
     <section class="section">
         <div class="container">
             <div class="section__header">Projects Gallery</div>
 
-            <div class="gallery">
-                <ul class="gallery__header" id="serviceList">
-                    <li class="service__type" id="interiorType">Interior</li>
-                    <li class="service__type" id="exteriorType">Exterior</li>
-                </ul>
+            <div class="gallery__interior">
+                <div class="interior__inner">
 
-                <ul class="interior__categories active" id="interior__categories">
-                    <li class="category__item">Floor</li>
-                    <li class="category__item">Interior 2</li>
-                    <li class="category__item">Interior 3</li>
-                </ul>
+                        <div class="interior__item">
+                            <div class="item__image">
+                                <img src="http://placehold.jp/300x300.png" alt="">
+                            </div>
+                        </div>
 
-                <ul class="exterior__categories" id="exterior__categories">
-                    <li class="category__item" data-index="0">Floor</li>
-                    <li class="category__item" data-index="1">Door</li>
-                    <li class="category__item"  data-index="2">Drywall</li>
-                </ul>
+                        <div class="interior__item">
+                            <div class="item__image">
+                                <img src="http://placehold.jp/300x300.png" alt="">
+                            </div>
+                        </div>
 
-                <div class="gallery__content" id="gallery__content">
-                    <div class="gallery__content-item" data-index="0">
-                        <img src="assets/images/exterior/floor/adress1/after/0.jpg" alt="">
-                    </div>
-                    <div class="gallery__content-item" data-index="1">
-                        <img src="assets/images/exterior/floor/adress1/after/1.jpg" alt="">
-                    </div>
-                    <div class="gallery__content-item" data-index="2">
-                        <img src="assets/images/exterior/floor/adress1/after/0.jpg" alt="">
-                    </div>
-                    <div class="gallery__content-item" data-index="3">
-                        <img src="assets/images/exterior/floor/adress1/after/1.jpg" alt="">
-                    </div>
-                    <div class="gallery__content-item" data-index="4">
-                        <img src="assets/images/exterior/floor/adress1/after/0.jpg" alt="">
-                    </div>
-                    <div class="gallery__content-item" data-index="5">
-                        <img src="assets/images/exterior/floor/adress1/after/1.jpg" alt="">
-                    </div>
+                        <div class="interior__item">
+                            <div class="item__image">
+                                <img src="http://placehold.jp/300x300.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="interior__item">
+                            <div class="item__image">
+                                <img src="http://placehold.jp/300x300.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="interior__item">
+                            <div class="item__image">
+                                <img src="http://placehold.jp/300x300.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="interior__item">
+                            <div class="item__image">
+                                <img src="http://placehold.jp/300x300.png" alt="">
+                            </div>
+                        </div>
+
                 </div>
-
             </div>
-
-            <div class="btn btn-gallery" id="modalBtn">open gallery</div>
         </div>
     </section>
 
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__logo">
-                <img src="assets/images/logo1.png" alt="logo">
-            </div>
-
-            <div class="footer__inner">
-                <div class="footer__item">
-                    <div class="info__title">Contact Us</div>
-                    <div class="info__item">
-                        <i class="fa-solid fa-clock fa-xl info__icon"></i>
-                        <div class="info__text">Mon-Fri 8AM to 7PM<br> Saturday 10AM to 4PM<br>Sunday 1PM to 4PM</div>
-                    </div>
-                    <div class="info__item">
-                        <i class="fa-solid fa-location-dot fa-xl info__icon"></i>
-                        <div class="info__text">22525 SE 64th Pl, Issaquah, WA, 98027</div>
-                    </div>
-                    <div class="info__item">
-                        <i class="fa-solid fa-phone fa-xl info__icon"></i>
-                        <div class="info__text">(425) 410 2292</div>
-                    </div>
-                    <div class="info__item">
-                        <i class="fa-solid fa-at fa-xl info__icon"></i>
-                        <div class="info__text">sales@prestigecolorco.com</div>
-                    </div>
-
-                </div>
-
-
-                <div class="footer__item">
-                    <div class="side__inner">
-                        <div class="side__text">A professional painting company on the Eastside,WA</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <div id="galleryModal" class="gallery__modal">
-        <div class="modal__content">
-            <span class="close">&times;</span>
-            <div class="slider" id="slider">
-                <div class="slider-item active">
-                    <img src="assets/images/exterior/floor/adress1/after/0.jpg" alt="">
-                </div>
-                <div class="slider-item">
-                    <img src="assets/images/exterior/floor/adress1/after/1.jpg" alt="">
-                </div>
-                <span class="slider-control-prev" role="button">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
-                    </svg>
-                </span>
-                <span class="slider-control-next" role="button">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
-                    </svg>
-                </span>
-            </div>
-        </div>
-    </div>
 </body>
-
 </html>

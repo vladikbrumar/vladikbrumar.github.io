@@ -61,12 +61,12 @@ function loadGalleryContent() {
         }
         projects[i] = project;
     }
-
+    console.log(data[ind])
     insertGalleryItems();
 }
 
 function insertGalleryItems(){
-
+    console.log(projects)
     document.getElementById("gallery__content").innerHTML = ''
     document.getElementById("gallery__content").innerHTML += `${Array(projects.length).join(0).split(0).map((item, i) => `<div class="gallery__content-item"><img src="assets/images/${typeSet}/${serviceSet}/${projects[i].name}/${projects[i].mainIMG}" alt=""></div>`).join('')}`;
 

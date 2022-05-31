@@ -22,7 +22,7 @@
         "type": "exterior",
         "service": "door",
         "projects": [{
-                "name": "all",
+                "name": "adress1",
                 "mainIMG": "mainIMG.jpg",
                 "after": ["d_0.jpg", "d_1.jpg", "d_2.jpg", "d_3.jpg", "d_4.jpg",
                          "d_5.jpg", "d_6.jpg", "d_7.jpg", "d_8.jpg", "d_9.jpg", "d_10.jpg", "d_11.jpg", "d_12.jpg", "d_13.jpg"],
