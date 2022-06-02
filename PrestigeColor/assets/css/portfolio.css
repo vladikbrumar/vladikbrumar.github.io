@@ -1,0 +1,138 @@
+.portfolio__intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding-top: 50px;
+
+    width: 100%;
+    height: 100vh;
+    min-height: 820px;
+    position: relative;
+
+    background: url("../images/portfolio.jpg") center no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.intro__title,
+.intro__subtitle {
+    color: #fff;
+}
+
+.section__header {
+    padding-bottom: 30px;
+}
+
+/* Service Type Switch */
+
+/*Switch*/
+.switch {
+    position: relative;
+    width: 260px;
+    height: 50px;
+    display: block;
+    margin: auto;
+    margin-bottom: auto;
+  }
+  
+  .switch input {
+    display: none;
+  }
+  
+  .slider.round {
+    border-radius: 50px;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border: 2px solid #2890ff;
+  }
+  
+  /*Moving SLider Section*/
+  .slider::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 50%;
+    left: 0;
+    bottom: 0;
+    background-color: #2890ff;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50px;
+  }
+  
+  /*Slider Text*/
+  .slider_text {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    font-size: 10px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .slider_text > span {
+    color: #fff;
+    font-size: 18px;
+    width: 50%;
+    display: block;
+    float: left;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  
+  /*Changes on Slide*/
+  input:checked + .slider::before {
+    -webkit-transform: translateX(130px);
+    -ms-transform: translateX(130px);
+    transform: translateX(130px);
+  }
+  
+  input:checked + .slider .off {
+    color: #2890ff;
+  }
+  
+  input:checked + .slider .on {
+    color: #fff;
+  }
+  
+  .slider .slider_text .on {
+    color: #2890ff;
+  }
+
+  /* GALLERY */
+
+  .gallery__inner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin: 40px 0;
+  }
+
+  .image__item {
+    width: 350px;
+    height: 350px;
+    margin: 20px;
+
+
+  }
+
+  .image__item img {
+    max-width: 100%;
+    max-height: 100%;
+  }
