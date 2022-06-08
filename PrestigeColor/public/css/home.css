@@ -1,0 +1,625 @@
+/* INTRO */
+.intro {
+    /*     выравнивание контейнера внутри по центру*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding-top: 50px;
+
+    width: 100%;
+    height: 100vh;
+    min-height: 820px;
+    position: relative;
+
+    background: url("../images/intro.jpg") center no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+/* RATING SECTION */
+.section--rating {
+    background: url("../images/intro.jpg") center no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+
+    padding: 40px 0;
+    color: #fff;
+    background-color: #000;
+    opacity: 0.7;
+    text-align: center;
+}
+
+.section-rating-stars {
+    display: inline-block;
+    margin-left: 100px;
+}
+
+.rating__text {
+    font-size: 28px;
+    line-height: 1.2em;
+}
+
+/* ABOUT */
+.about {
+    text-align: center;
+}
+
+.about .section__header {
+    padding: 0;
+    margin: 10px 0 30px 0;
+}
+
+.about__inner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about__item {
+    width: 500px;
+    height: 300px;
+}
+
+.about__item img {
+    width: 100%;
+    height: 100%;
+}
+
+.about__text {
+    margin: auto;
+    height: 60%;
+    text-align: center;
+}
+
+.about .btn:hover {
+    background: #999999;
+    color: #fff;
+}
+
+/*    WHY US    */
+.why {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.why__item {
+    width: 200px;
+    margin: 0 20px;
+}
+
+.why__text {
+    font-size: 16px;
+    line-height: 1.5em;
+    font-weight: 400;
+    color: #000;
+    text-align: center;
+
+    margin-bottom: 70px;
+}
+
+.why__icon {
+    margin-bottom: 15px;
+}
+
+.why__icon img {
+    border-radius: 50px;
+}
+
+.why__pros {
+    font-size: 16px;
+    line-height: 1.2em;
+    color: #000;
+}
+
+/*    REVIEWS    */
+
+.reviews {
+    display: flex;
+    justify-content: space-around;
+}
+
+.reviews__card {
+    width: 30%;
+    height: 325px;
+
+    min-width: 220px;
+    min-height: 250px;
+
+    background-color: #3e3e3e;
+    color: #fff;
+
+    border-radius: 35px;
+    position: relative;
+
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: 0.3s all ease-in-out;
+}
+
+.reviews__card:hover {
+    transform: scale(1.1);
+    
+}
+
+.card__overlay {
+    position: absolute;
+    z-index: 1;
+    bottom: -1px;
+    left: 0;
+
+    width: 100%;
+    height: 30%;
+
+    border-radius: 25px 0px 25px 25px; 
+
+    background-color: #fff;
+    color: #000;
+
+}
+
+.card__overlay::before {
+    content: "";
+    position: absolute;
+    right: 1px;
+    bottom: 98px;
+    height: 50%;
+    width: 25px;
+    border-bottom-right-radius: 35px;
+    box-shadow: 1px 25px 0 0 #fff;
+}
+
+.overlay__inner {
+    display: flex;
+    /* justify-items: center; */
+    align-items: center;
+    /* align-content: stretch; */
+    justify-content: center;
+    /* flex-direction: row; */
+    /* vertical-align: center; */
+    height: 100%;
+    padding: 10px;
+    
+}
+
+.reviews__img {
+    border-radius: 50%; 
+    margin: 0;
+    margin-right: 15px;
+    padding: 0;
+}
+
+
+.reviews__title {
+    font-size: 22px;
+    font-weight: 500;
+    /* margin-top: 10px; */
+
+    /* padding: 30px; */
+
+}
+
+.reviews__rating {
+    display: block;
+    font-size: 10px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.reviews__text {
+    font-size: 14px;
+    font-weight: 300;
+    font-style: italic;
+
+    text-align: center;
+    padding: 50px;
+}
+
+/*    PORTFOLIO    */
+.portfolio {
+    display: flex;
+    justify-content: space-around;
+
+    margin-top: 100px;
+    padding-bottom: 40px;
+}
+
+.portfolio img {
+    width: 500px;
+    height: 350px;
+}
+
+.content .section__header {
+    padding: 10px 0 20px;
+}
+
+.portfolio__text {
+    font-size: 18px;
+    width: 500px;
+    color: #000;
+    line-height: 1.2em;
+}
+
+/*    SERVICES    */
+/* .services__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.list {
+    display: inline-block;
+    height: auto;
+    margin: 0 100px;
+    padding-top: 40px;
+}
+
+.list__item {
+    font-size: 15px;
+    font-weight: 300;
+    color: #000;
+    margin-bottom: 20px;
+    transition: transform .2s linear;
+
+}
+
+.list__item:first-child {
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 1.3em;
+    color: #000;
+
+    margin-bottom: 30px;
+}
+
+.list__item:hover {
+    transform: scale(1.2);
+} */
+
+.services__inner {
+    display: block;
+    width: 100%;
+
+}
+
+.services__type {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.services__type:last-child {
+    flex-direction: row-reverse;
+    margin-top: 50px;
+}
+
+.services-type__content {
+    width: 40%;
+    height: 200px;
+    position: relative;
+    text-align: center;
+}
+
+.services-type__title {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.list {
+    margin-top: 20px;
+}
+
+ul.list {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
+
+.list__item {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.services__img {
+    width: 350px;
+    height: 250px;
+}
+
+/*    CONTACT    */
+.contact {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.contact__info iframe {
+    display: block;
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    z-index: 1000;
+
+    width: 600px;
+    height: 470px;
+}
+
+.contact__form {
+    padding: 50px 0;
+/* 
+    position: absolute;
+    top: 0;
+    right: 0; */
+    float: right;
+    width: 50%;
+    min-width: 200px;
+    height: 470px;
+
+    /* background: rgb(255, 255, 255, 0.8);
+    border-radius: 35px; */
+}
+
+
+/* Contact form */
+.contact__input {
+    width: 70%;
+    height: 45px;
+
+    padding: 0 20px;
+    margin-bottom: 20px;
+
+    border: none;
+    border-radius: 25px;
+
+    font-size: 15px;
+    color: #000;
+    text-align: left;
+
+    outline-color: #999999;
+}
+
+.contact__input--area {
+    height: 100px;
+
+    padding: 15px 20px;
+
+    font-size: 15px;
+    font-family: inherit;
+}
+
+.contact__btn {
+    display: block;
+    margin: 0 auto;
+    padding: 15px 60px;
+
+    border: none;
+    border-radius: 30px;
+    background: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+
+    transition: transform .2s linear;
+    transition: background .1 linear;
+}
+
+.contact__btn:hover {
+    background: #595959;
+    transform: scale(1.1)
+} 
+
+
+@media (max-width: 1230px) {
+    /* Section rating */
+    .section--rating {
+        padding: 40px 0;
+    }
+
+    .section-rating-stars {
+        display: inline-block;
+        margin: 0;
+        margin-left: 100px;
+    }
+}
+
+@media (max-width: 990px) {
+    /* Section rating */
+    .section--rating {
+        padding: 25px 0;
+    }
+
+    .section-rating-stars {
+        display: block;
+        margin: 0;
+        margin-top: 10px;
+    }
+
+    /* Section about */
+    .about__item {
+        width: 400px;
+        height: 250px;
+    }
+
+    .about .section__header {
+        margin-bottom: 15px;
+    }
+
+    .about__text {
+        padding: 0 15px;
+    }
+
+    /* Section Reviews */
+    .reviews__card {
+       height: 270px;
+    }
+
+    .reviews__text {
+        padding: 20px;
+    }
+
+    .card__overlay::before {
+        bottom: 81px;
+        height: 60%;
+    }
+
+    /* Section Portfolio */
+    .portfolio img {
+        width: 350px;
+        height: 250px;
+    }
+
+    .portfolio .section__header{
+        font-size: 35px;
+        width: 400px;
+    }
+
+    .portfolio__text {
+        width: 400px;
+    }
+
+    /* Section Contact */
+    .contact {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact__form {
+        width: 80%;
+    }
+}
+
+@media (max-width: 770px) {
+    /* Section */
+    .section__header {
+        font-size: 35px;
+        padding: 35px;
+    }
+
+    /* Section rating */
+    .section--rating {
+        padding: 25px 0;
+    }
+
+    .section-rating-stars {
+        display: inline-block;
+        margin: 0;
+        margin-left: 30px;
+    }
+
+    /* Section about */
+    .about__inner {
+        flex-direction: column;
+    }
+
+    /* Section Why */
+    .why {
+        flex-wrap: wrap;
+    }
+
+    .why__item {
+        width: 100px; 
+        margin: 0 30px;
+     }
+
+    .why__icon img {
+        width: 80px;
+    }
+
+    .why__icon {
+        margin-bottom: 10px;
+    }
+    
+    .why__pros {
+        font-size: 15px;
+    }
+
+    .why__text {
+        font-size: 14px;
+        margin-bottom: 45px;
+    }
+
+    /* Section Reviews */
+    .reviews {
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .reviews__card {
+        margin-bottom: 25px;
+        height: 250px;
+    }
+
+    .reviews__text {
+        padding: 20px;
+        font-size: 13px;
+    }
+
+    .card__overlay::before {
+        bottom: 75px;
+    }
+
+    /* Section Portfolio */
+    .portfolio {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        align-items: center;
+
+        position: relative;
+    }
+
+    .portfolio .btn {
+        margin: 0;
+        
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%)
+    }
+
+    .portfolio__text {
+        margin-bottom: 25px;
+    }
+
+    /* Section Services */
+    .services__type {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 575px) {
+    /* Section */
+    .section__header {
+        font-size: 30px;
+    }
+
+
+    /* Section rating */
+    .section--rating {
+        padding: 25px 0;
+    }
+
+    .section-rating-stars {
+        display: inline-block;
+        margin: 0;
+        margin-left: 30px;
+    }
+
+    /* Section Why */
+    .why__icon img {
+        width: 60px;
+    }
+
+    /* Section Contact */
+    .contact__info iframe{
+        width: 100%;
+        height: 80%;
+    }
+}
