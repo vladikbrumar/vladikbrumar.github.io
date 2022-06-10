@@ -7,7 +7,6 @@ body {
     color: #333;
 
     overflow-x: hidden;
-    min-width: 350px;
 }
 
 *,
@@ -45,7 +44,7 @@ li {
 .container {
     width: 100%;
     max-width: 1230px;
-    min-width: 300px;
+    /* min-width: 300px; */
     padding: 0 15px;
     margin: 0 auto;
 }
