@@ -258,6 +258,13 @@ input:checked + .switch-slider .on {
 }
 
 @media (max-width: 575px) {
-  
+  #btn-back {
+    position: fixed;
+    z-index: 100;
+    margin: 0;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 

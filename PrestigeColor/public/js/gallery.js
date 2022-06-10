@@ -19,9 +19,9 @@ function loadGallery() {
 }
 
 // parse data from json file
-async function fetchExteriorData() {
+async function fetchExteriorData(type) {
     try {
-        const response = await fetch('../public/data/exterior.json', {
+        const response = await fetch(`../public/data/${type}.json`, {
             method: 'GET',
             credentials: 'same-origin'
         });
@@ -46,7 +46,7 @@ function clickOnCategory(){
 // of item loads its examples
 async function laodCategoryBlock(service, category) {
     // data from json file
-    const data = await fetchExteriorData();
+    const data = await fetchExteriorData(service.id);
 
     // Back button
     var backBtn = document.getElementById("btn-back");
