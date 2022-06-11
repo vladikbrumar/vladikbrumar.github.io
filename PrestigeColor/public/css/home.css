@@ -1,4 +1,3 @@
-/* INTRO */
 .intro {
     /*     выравнивание контейнера внутри по центру*/
     display: flex;
@@ -14,7 +13,7 @@
     /* min-width: 300px; */
     position: relative;
 
-    background: url("../images/intro.jpg") center no-repeat;
+    background: url("/images/intro.jpg") center no-repeat;
     background-attachment: fixed;
     -webkit-background-size: cover;
     background-size: cover;
@@ -22,7 +21,7 @@
 
 /* RATING SECTION */
 .section--rating {
-    background: url("../images/intro.jpg") center no-repeat;
+    background: url("/images/intro.jpg") center no-repeat;
     background-attachment: fixed;
     -webkit-background-size: cover;
     background-size: cover;

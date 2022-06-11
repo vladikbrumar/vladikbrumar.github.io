@@ -6,7 +6,6 @@ var categoryItems = document.getElementsByClassName("category__item")
 
 // toggle switch and load its categories block
 function loadGallery() {
-    console.log("switch clicked!")
     var exterior = document.getElementById("exterior")
     var interior = document.getElementById("interior")
     if(switchButton.checked) {
@@ -21,7 +20,7 @@ function loadGallery() {
 // parse data from json file
 async function fetchExteriorData(type) {
     try {
-        const response = await fetch(`../public/data/${type}.json`, {
+        const response = await fetch(`/data/${type}.json`, {
             method: 'GET',
             credentials: 'same-origin'
         });
@@ -55,7 +54,7 @@ async function laodCategoryBlock(service, category) {
     backBtn.dataset.backTo = service.id;
 
     // templates
-    const srcTemplate = `../public/images/${service.id}/${category}/`
+    const srcTemplate = `/images/${service.id}/${category}/`
 
     // showing/hidding elements
     document.getElementById(service.id).style.display = "none";
