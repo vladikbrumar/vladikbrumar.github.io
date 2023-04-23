@@ -16,7 +16,7 @@ body {
 
 .container {
     width: 428px;
-    height: 90vh;
+    height: 100vh;
 }
 
 .slider-container {
@@ -99,7 +99,7 @@ body {
 }
 
 .progress-bar {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 
@@ -127,6 +127,10 @@ body {
     width: 90%;
     display: flex;
     justify-content: space-between;
+}
+
+.nav-btns button {
+    display: none;
 }
 
 .nav-btns .btn {
