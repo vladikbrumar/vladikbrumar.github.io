@@ -4,7 +4,8 @@ const prevBtn = document.querySelector('.btn-prev');
 const clickBtn = document.querySelector('.btn-click-me');
 const navBtns = document.querySelector('.nav-btns');
 
-const compliments = ['милая', 'ласковая','незаменимая','умная','бусинка','шикарная','веселая','бесценная','дорогая','волшебная'];
+const compliments = ['милая', 'ласковая','незаменимая','умная','бусинка','шикарная','веселая','бесценная','дорогая','волшебная', 'нажми еще раз', 'Лиичка', 'приветик..', 'ой.. ты нажала', 'красотка', 'ням-нямчик', 
+                     'нажмешь еще?', 'подсказка: нужно каждый день проверять', 'мне нужно что-то тебе сказать..'];
 
 const pins = document.querySelectorAll('.pin');
 
@@ -36,7 +37,7 @@ prevBtn.addEventListener('click', () => {
 
 clickBtn.addEventListener('click', () => {
     const randomCompliment = compliments[Math.floor(Math.random() * compliments.length)];
-    alert('Ты ' + randomCompliment);
+    alert(randomCompliment);
 })
 
 function carousel() {
